@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- Required elements-->
+        <id>Naxam.FMDB.iOS</id>
+        <version>2.7.2</version>
+        <description>Xamarin Binding Library - FMDB</description>
+        <authors>Vu Duc Tuyen</authors>
+        <owners>NAXAM CO.,LTD</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <title>Naxam - FMDB</title>
+        <releaseNotes>FMDB 2.7.2</releaseNotes>
+        <summary>Xamarin Binding Library - FMDB</summary>
+        <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/NAXAM/fmdb-ios-binding</projectUrl>
+        <copyright>Copyright (c) 2017 NAXAM</copyright>
+        <tags>Xamarin.iOS, fmdb</tags>
+    </metadata>
+    <!-- Optional 'files' node -->
+    <files>
+        <file src="Naxam.FMDB.iOS/bin/Release/Naxam.FMDB.iOS.dll" target="lib/Xamarin.iOS10/Naxam.FMDB.iOS.dll" />
+    </files>
+</package>
