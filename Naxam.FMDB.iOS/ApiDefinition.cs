@@ -401,7 +401,7 @@ namespace FMDB
         // -(BOOL)executeUpdate:(NSString * _Nonnull)sql withErrorAndBindings:(NSError * _Nullable * _Nullable)outErr, ...;
         [Internal]
         [Export("executeUpdate:withErrorAndBindings:", IsVariadic = true)]
-        bool ExecuteUpdate(string sql, [NullAllowed] out NSError outErr, params NSObject[] varArgs);
+        bool ExecuteUpdate(string sql, [NullAllowed] out NSError outErr, IntPtr varArgs);
 
         //// -(BOOL)update:(NSString * _Nonnull)sql withErrorAndBindings:(NSError * _Nullable * _Nullable)outErr, ... __attribute__((deprecated("Use executeUpdate:withErrorAndBindings: instead")));
         //[Internal]
@@ -411,12 +411,12 @@ namespace FMDB
         // -(BOOL)executeUpdate:(NSString * _Nonnull)sql, ...;
         [Internal]
         [Export("executeUpdate:", IsVariadic = true)]
-        bool ExecuteUpdate(string sql, params NSObject[] varArgs);
+        bool ExecuteUpdate(string sql, IntPtr varArgs);
 
         // -(BOOL)executeUpdateWithFormat:(NSString * _Nonnull)format, ... __attribute__((format(NSString, 1, 2)));
         [Internal]
         [Export("executeUpdateWithFormat:", IsVariadic = true)]
-        bool ExecuteUpdateWithFormat(string format, params NSObject[] varArgs);
+        bool ExecuteUpdateWithFormat(string format, IntPtr varArgs);
 
         // -(BOOL)executeUpdate:(NSString * _Nonnull)sql withArgumentsInArray:(NSArray * _Nonnull)arguments;
         [Export("executeUpdate:withArgumentsInArray:")]
@@ -454,13 +454,13 @@ namespace FMDB
         [Internal]
         [Export("executeQuery:", IsVariadic = true)]
         [return: NullAllowed]
-        FMResultSet ExecuteQuery(string sql, params NSObject[] varArgs);
+        FMResultSet ExecuteQuery(string sql, IntPtr varArgs);
 
         // -(FMResultSet * _Nullable)executeQueryWithFormat:(NSString * _Nonnull)format, ... __attribute__((format(NSString, 1, 2)));
         [Internal]
         [Export("executeQueryWithFormat:", IsVariadic = true)]
         [return: NullAllowed]
-        FMResultSet ExecuteQueryWithFormat(string format, params NSObject[] varArgs);
+        FMResultSet ExecuteQueryWithFormat(string format, IntPtr varArgs);
 
         // -(FMResultSet * _Nullable)executeQuery:(NSString * _Nonnull)sql withArgumentsInArray:(NSArray * _Nonnull)arguments;
         [Export("executeQuery:withArgumentsInArray:")]
